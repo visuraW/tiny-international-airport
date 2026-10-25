@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=VT323&display=swap">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -28,7 +28,6 @@
       <span class="brand-name">Tiny International<br>Airport</span>
     </a>
     <nav aria-label="Sections">
-      <a href="#flights">Flights</a>
       <a href="#fleet">Fleet</a>
       <a href="#vehicles">Vehicles</a>
       <a href="#story">Story</a>
@@ -52,58 +51,12 @@
       <h1>Tiny International Airport</h1>
       <p class="lede">A small airport we built by hand. One plane, one tower, one terminal and two trucks. Have a look around.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#flights">Flight status</a>
-        <a class="btn btn-ghost" href="#fleet">See the fleet in 360°</a>
+        <a class="btn btn-primary" href="#fleet">See the fleet in 360°</a>
+        <a class="btn btn-ghost" href="#behind">Behind the scenes</a>
       </div>
     </div>
   </section>
 
-  <section id="flights" class="section">
-    <div class="wrap">
-      <div class="head">
-        <p class="kicker">Today</p>
-        <h2>Arrivals &amp; Departures</h2>
-      </div>
-      <div class="board" role="table" aria-label="Flight board">
-        <div class="board-row board-head" role="row">
-          <span role="columnheader">Time</span>
-          <span role="columnheader">Flight</span>
-          <span role="columnheader">From / To</span>
-          <span role="columnheader">Gate</span>
-          <span role="columnheader">Status</span>
-        </div>
-        <div class="board-row" role="row">
-          <span role="cell" class="flap">07:42</span>
-          <span role="cell" class="flap">TNY 071</span>
-          <span role="cell" class="flap">ARRIVAL</span>
-          <span role="cell" class="flap">STAND 2</span>
-          <span role="cell"><b class="st st-ok">LANDED</b></span>
-        </div>
-        <div class="board-row" role="row">
-          <span role="cell" class="flap">07:43</span>
-          <span role="cell" class="flap">TNY 071</span>
-          <span role="cell" class="flap">RWY 15</span>
-          <span role="cell" class="flap">STAND 2</span>
-          <span role="cell"><b class="st st-board">REFUELLING</b></span>
-        </div>
-        <div class="board-row" role="row">
-          <span role="cell" class="flap">08:15</span>
-          <span role="cell" class="flap">TNY 002</span>
-          <span role="cell" class="flap">KITCHEN TABLE</span>
-          <span role="cell" class="flap">STAND 1</span>
-          <span role="cell"><b class="st st-late">DELAYED</b></span>
-        </div>
-        <div class="board-row" role="row">
-          <span role="cell" class="flap">11:30</span>
-          <span role="cell" class="flap">TNY 012</span>
-          <span role="cell" class="flap">TOP SHELF</span>
-          <span role="cell" class="flap">STAND 2</span>
-          <span role="cell"><b class="st st-ok">ON TIME</b></span>
-        </div>
-      </div>
-      <p class="fine">TNY 002 is delayed. There's a cat on the runway again.</p>
-    </div>
-  </section>
 
   <section id="fleet" class="section section-alt">
     <div class="wrap">
@@ -301,7 +254,7 @@
   </div>
 </footer>
 
-<script src="js/viewer360.js?v=6"></script>
-<script src="js/site.js?v=6"></script>
+<script src="js/viewer360.js?v=7"></script>
+<script src="js/site.js?v=7"></script>
 </body>
 </html>
