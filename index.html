@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiny International Airport · TNY</title>
+  <meta name="description" content="Tiny International Airport, a small airport we built by hand. See the plane, tower, terminal and trucks in 360°.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=VT323&display=swap">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+<!-- Camcorder-style bar, like the on-screen display in our video -->
+<div class="osd-bar" aria-hidden="true">
+  <span class="rec"><i></i>REC</span>
+  <span class="osd-date">NOV 14 1989</span>
+  <span class="osd-time" id="osd-time">07:42:16 AM</span>
+  <span class="osd-weather">WX: SUNNY</span>
+  <span class="osd-sp">SP</span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-code">TNY</span>
+      <span class="brand-name">Tiny International<br>Airport</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#flights">Flights</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#vehicles">Vehicles</a>
+      <a href="#story">Story</a>
+      <a href="#behind">Behind the scenes</a>
+      <a href="#crew">Crew</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-frame">
+      <video id="promo" class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="sound-btn" id="sound-btn" aria-pressed="false">Sound off</button>
+    </div>
+    <div class="wrap hero-copy">
+      <p class="kicker">Welcome to TNY</p>
+      <h1>Tiny International Airport</h1>
+      <p class="lede">A small airport we built by hand. One plane, one tower, one terminal and two trucks. Have a look around.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#flights">Flight status</a>
+        <a class="btn btn-ghost" href="#fleet">See the fleet in 360°</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="flights" class="section">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Today</p>
+        <h2>Arrivals &amp; Departures</h2>
+      </div>
+      <div class="board" role="table" aria-label="Flight board">
+        <div class="board-row board-head" role="row">
+          <span role="columnheader">Time</span>
+          <span role="columnheader">Flight</span>
+          <span role="columnheader">From / To</span>
+          <span role="columnheader">Gate</span>
+          <span role="columnheader">Status</span>
+        </div>
+        <div class="board-row" role="row">
+          <span role="cell" class="flap">07:42</span>
+          <span role="cell" class="flap">TNY 071</span>
+          <span role="cell" class="flap">ARRIVAL</span>
+          <span role="cell" class="flap">STAND 2</span>
+          <span role="cell"><b class="st st-ok">LANDED</b></span>
+        </div>
+        <div class="board-row" role="row">
+          <span role="cell" class="flap">07:43</span>
+          <span role="cell" class="flap">TNY 071</span>
+          <span role="cell" class="flap">RWY 15</span>
+          <span role="cell" class="flap">STAND 2</span>
+          <span role="cell"><b class="st st-board">REFUELLING</b></span>
+        </div>
+        <div class="board-row" role="row">
+          <span role="cell" class="flap">08:15</span>
+          <span role="cell" class="flap">TNY 002</span>
+          <span role="cell" class="flap">KITCHEN TABLE</span>
+          <span role="cell" class="flap">STAND 1</span>
+          <span role="cell"><b class="st st-late">DELAYED</b></span>
+        </div>
+        <div class="board-row" role="row">
+          <span role="cell" class="flap">11:30</span>
+          <span role="cell" class="flap">TNY 012</span>
+          <span role="cell" class="flap">TOP SHELF</span>
+          <span role="cell" class="flap">STAND 2</span>
+          <span role="cell"><b class="st st-ok">ON TIME</b></span>
+        </div>
+      </div>
+      <p class="fine">TNY 002 is delayed. There's a cat on the runway again.</p>
+    </div>
+  </section>
+
+  <section id="fleet" class="section section-alt">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">360° view</p>
+        <h2>Our fleet</h2>
+        <p class="head-note">Drag left or right to turn each model. On a phone, swipe.</p>
+      </div>
+
+      <article class="exhibit exhibit-wide">
+        <div class="spin360" data-folder="assets/360/plane" data-frames="36" data-name="Flight 071 plane"></div>
+        <div class="exhibit-info">
+          <p class="tag">Aircraft</p>
+          <h3>Flight 071</h3>
+          <p>Our one and only plane. White body, red tail and red wing tips.</p>
+          <dl class="specs">
+            <div><dt>Fleet size</dt><dd>1</dd></div>
+            <div><dt>Engines</dt><dd>2</dd></div>
+            <div><dt>Usual route</dt><dd>Stand 2 to Runway 15</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <div class="exhibit-grid">
+        <article class="exhibit">
+          <div class="spin360 spin-tall" data-folder="assets/360/tower" data-frames="36" data-name="control tower"></div>
+          <div class="exhibit-info">
+            <p class="tag">Air traffic control</p>
+            <h3>Control Tower</h3>
+            <p>Keeps an eye on the runway. It's a quiet job most days.</p>
+            <dl class="specs">
+              <div><dt>Flights per day</dt><dd>1</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="exhibit">
+          <div class="spin360" data-folder="assets/360/building" data-frames="36" data-name="terminal building" data-speed="110"></div>
+          <div class="exhibit-info">
+            <p class="tag">Terminal</p>
+            <h3>Terminal Building</h3>
+            <p>Where passengers would wait, if we had any. It's fixed to the base, so we filmed it in place.</p>
+            <dl class="specs">
+              <div><dt>Gates</dt><dd>1</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="vehicles" class="section">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Ground vehicles</p>
+        <h2>On the apron</h2>
+      </div>
+      <div class="exhibit-grid">
+        <article class="exhibit">
+          <div class="spin360" data-folder="assets/360/fuel-truck" data-frames="36" data-name="fuel truck"></div>
+          <div class="exhibit-info">
+            <p class="tag">Fuel</p>
+            <h3>Fuel Truck</h3>
+            <p>Comes out to refuel Flight 071 before every take-off.</p>
+            <div class="fuel" aria-label="Fuel gauge, about 70 percent">
+              <span>FUEL</span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </article>
+        <article class="exhibit">
+          <div class="spin360" data-folder="assets/360/box-truck" data-frames="36" data-name="cargo truck"></div>
+          <div class="exhibit-info">
+            <p class="tag">Cargo</p>
+            <h3>Cargo Truck</h3>
+            <p>Moves boxes between the terminal and the plane.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section section-alt">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Nov 14 1989</p>
+        <h2>One morning at TNY</h2>
+        <p class="head-note">From our 15-second video.</p>
+      </div>
+      <ol class="timeline">
+        <li><img src="assets/story/1.jpg" alt="The plane approaching the airport" loading="lazy"><div><time>07:42:16</time><h4>On approach</h4><p>Flight 071 comes in over the fields.</p></div></li>
+        <li><img src="assets/story/2.jpg" alt="The plane landing next to the terminal" loading="lazy"><div><time>07:42:19</time><h4>Landing</h4><p>Touchdown on the runway and a slow roll to Stand 2.</p></div></li>
+        <li><img src="assets/story/3.jpg" alt="The fuel truck driving up to the parked plane" loading="lazy"><div><time>07:42:21</time><h4>Fuel truck on the way</h4><p>The fuel truck pulls up next to the plane.</p></div></li>
+        <li><img src="assets/story/4.jpg" alt="The fuel truck refuelling the plane" loading="lazy"><div><time>07:42:22</time><h4>Refuelling</h4><p>Filling up for the next trip.</p></div></li>
+        <li><img src="assets/story/5.jpg" alt="The plane taxiing from stand 2 towards runway 15" loading="lazy"><div><time>07:42:24</time><h4>Stand 2 → Runway 15</h4><p>Taxi out to the runway.</p></div></li>
+        <li><img src="assets/story/6.jpg" alt="The plane taking off" loading="lazy"><div><time>07:42:27</time><h4>Take-off</h4><p>Wheels up. See you tomorrow, 071.</p></div></li>
+        <li><img src="assets/story/7.jpg" alt="End card reading Thanks for flying Tiny International" loading="lazy"><div><time>07:42:29</time><h4>Thanks for flying</h4><p>That's the morning done.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="behind" class="section">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Behind the scenes</p>
+        <h2>How it really looked</h2>
+        <p class="head-note">The whole airport sits inside a cardboard box on a table. The plane flew on a stick.</p>
+      </div>
+
+      <div class="compare">
+        <figure>
+          <video class="bts-video" autoplay muted loop playsinline preload="metadata" poster="assets/bts/raw-cut.jpg">
+            <source src="assets/bts/raw-cut.mp4" type="video/mp4">
+          </video>
+          <figcaption><b>What we shot</b> Stop motion in the box</figcaption>
+        </figure>
+        <figure>
+          <video class="bts-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+            <source src="assets/hero.mp4" type="video/mp4">
+          </video>
+          <figcaption><b>What you saw</b> The final video</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="sub">From the camera roll</h3>
+      <div class="clips">
+        <figure><video autoplay muted loop playsinline preload="metadata" poster="assets/bts/stop-1.jpg"><source src="assets/bts/stop-1.mp4" type="video/mp4"></video><figcaption>Landing, one frame at a time</figcaption></figure>
+        <figure><video autoplay muted loop playsinline preload="metadata" poster="assets/bts/stop-3.jpg"><source src="assets/bts/stop-3.mp4" type="video/mp4"></video><figcaption>Refuel scene</figcaption></figure>
+        <figure><video autoplay muted loop playsinline preload="metadata" poster="assets/bts/stop-4.jpg"><source src="assets/bts/stop-4.mp4" type="video/mp4"></video><figcaption>Taxi to the runway</figcaption></figure>
+        <figure><video autoplay muted loop playsinline preload="metadata" poster="assets/bts/stop-5.jpg"><source src="assets/bts/stop-5.mp4" type="video/mp4"></video><figcaption>Take-off, stick and all</figcaption></figure>
+        <figure><video autoplay muted loop playsinline preload="metadata" poster="assets/bts/turntable.jpg"><source src="assets/bts/turntable.mp4" type="video/mp4"></video><figcaption>Turntable for the 360° shots</figcaption></figure>
+      </div>
+
+      <h3 class="sub">The diorama</h3>
+      <div class="gallery">
+        <figure><img src="assets/gallery/diorama-1.jpg" alt="Terminal building from the front, with the apron and road below" loading="lazy"><figcaption>Terminal from the front</figcaption></figure>
+        <figure><img src="assets/gallery/diorama-2.jpg" alt="Terminal from the corner, with the green grass border" loading="lazy"><figcaption>Corner of the base</figcaption></figure>
+        <figure><img src="assets/gallery/diorama-3.jpg" alt="Terminal with the road and zebra crossing behind it" loading="lazy"><figcaption>Road and crossing</figcaption></figure>
+        <figure><img src="assets/gallery/diorama-4.jpg" alt="Terminal from the far side next to the road" loading="lazy"><figcaption>From the road side</figcaption></figure>
+      </div>
+
+      <h3 class="sub">How we made it</h3>
+      <ol class="steps">
+        <li><h4>Sketch</h4><p>We drew the layout first.</p></li>
+        <li><h4>Base</h4><p>Cardboard base with a painted road, taxi lines and grass edges.</p></li>
+        <li><h4>Models</h4><p>The plane, tower, terminal and two trucks, all made by hand.</p></li>
+        <li><h4>Stop motion</h4><p>Moved the plane a little for each shot inside the box.</p></li>
+        <li><h4>360° shots</h4><p>Filmed each model on a turntable and picked 36 frames from one turn.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="crew" class="section section-alt">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">Staff</p>
+        <h2>Our crew</h2>
+        <p class="head-note">Four people run the whole airport. We'll be hiring soon.</p>
+      </div>
+      <div class="crew">
+        <div class="badge">
+          <p class="badge-top"><span>TNY</span> Staff pass</p>
+          <p class="badge-name">Perera W A D M</p>
+          <p class="badge-id">IT23553446</p>
+        </div>
+        <div class="badge">
+          <p class="badge-top"><span>TNY</span> Staff pass</p>
+          <p class="badge-name">Chandrarathne H G P N</p>
+          <p class="badge-id">IT23584372</p>
+        </div>
+        <div class="badge">
+          <p class="badge-top"><span>TNY</span> Staff pass</p>
+          <p class="badge-name">Visura Wathsala R R M P</p>
+          <p class="badge-id">IT23703476</p>
+        </div>
+        <div class="badge">
+          <p class="badge-top"><span>TNY</span> Staff pass</p>
+          <p class="badge-name">Ranasinghe R A M G K</p>
+          <p class="badge-id">IT23742772</p>
+        </div>
+        <div class="badge badge-open">
+          <p class="badge-top"><span>TNY</span> Now hiring</p>
+          <p class="badge-name">Your name here</p>
+          <p class="badge-role">Passengers wanted</p>
+          <p class="badge-id">No experience needed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p class="thanks">Thanks for flying<br><strong>Tiny International</strong></p>
+    <p class="footer-meta">© 1989 Tiny International Airport</p>
+  </div>
+</footer>
+
+<script src="js/viewer360.js?v=6"></script>
+<script src="js/site.js?v=6"></script>
+</body>
+</html>
